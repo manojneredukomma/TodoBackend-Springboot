@@ -16,9 +16,9 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>restful-web-services</name>
 	<description>Demo project for Spring Boot</description>
-	<properties>
-		<java.version>11</java.version>
-	</properties>
+<!-- 	<properties> -->
+<!-- 		<java.version>11</java.version> -->
+<!-- 	</properties> -->
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -33,7 +33,7 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>io.jsonwebtoken</groupId>
 			<artifactId>jjwt</artifactId>
@@ -63,10 +63,16 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<goals>
+							<goal>repackage</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>
-     
-    <packaging>jar</packaging>
 
+	<packaging>jar</packaging>
 </project>
